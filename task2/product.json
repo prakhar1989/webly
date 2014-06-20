@@ -1,0 +1,168 @@
+{
+    "id": 413,
+    "attributeSetId": 10,
+    "slug": "open-cross-studs",
+    "sku": "PE3000",
+    "name": "Open Cross Studs",
+    "type": "simple",
+    "createdAt": "2014-05-26T12:39:03+00:00",
+    "updatedAt": "2014-06-20T00:00:19+00:00",
+    "shortDescription": " Sterling Silver Cubic Zirconia Stud Earrings with Rhodium-Plating ",
+    "description": "This beautiful design is crafted out of Sterling Silver and comes with a 925 stamp. It is is plated with Nickel Free Rhodium for shine and protection. This piece of jewellery is studded with high quality Swiss Cubic Zirconia. One year warranty against manufacturing defects.",
+    "price": 1100,
+    "finalPrice": 1100,
+    "meta": [],
+    "categories": [
+        4,
+        19,
+        20
+    ],
+    "lastImportedAt": "2014-05-26T12:38:59+00:00",
+    "visibility": 4,
+    "useStock": true,
+    "stock": {
+        "inStock": false,
+        "quantity": 0
+    },
+    "images": [
+        {
+            "url": "http://store.retailplusapp.com.s3-website-us-east-1.amazonaws.com/media/533ce7e652c8fdd31d8b4569/catalog/product/pe3000.jpg",
+            "isThumbnail": true,
+            "position": 1,
+            "label": "",
+            "width": 1000,
+            "height": 1000,
+            "cloudinary": {
+                "id": "izdziiuermrlypert0sw",
+                "version": 1396501685,
+                "format": "jpg",
+                "cloud_name": "retailplus"
+            }
+        },
+        {
+            "url": "http://store.retailplusapp.com.s3-website-us-east-1.amazonaws.com/media/533ce7e652c8fdd31d8b4569/catalog/product/pe3000_2.jpg",
+            "position": 2,
+            "label": "",
+            "width": 1170,
+            "height": 1000,
+            "cloudinary": {
+                "id": "g59agxkgk2ctulgr35jz",
+                "version": 1396501686,
+                "format": "jpg",
+                "cloud_name": "retailplus"
+            }
+        }
+    ],
+    "thumbnail": {
+        "url": "http://store.retailplusapp.com.s3-website-us-east-1.amazonaws.com/media/533ce7e652c8fdd31d8b4569/catalog/product/pe3000.jpg",
+        "width": 1000,
+        "height": 1000,
+        "cloudinary": {
+            "id": "izdziiuermrlypert0sw",
+            "version": 1396501685,
+            "format": "jpg",
+            "cloud_name": "retailplus"
+        }
+    },
+    "additionalAttributes": [
+        {
+            "id": 9,
+            "attributeId": 100,
+            "value": 0,
+            "isVisibleInFront": false,
+            "frontendLabel": "Enable Recurring Profile",
+            "type": "select",
+            "attributeCode": "is_recurring"
+        },
+        {
+            "id": 2,
+            "attributeId": 110,
+            "value": "0",
+            "isVisibleInFront": false,
+            "type": "text",
+            "attributeCode": "required_options"
+        },
+        {
+            "id": 6,
+            "attributeId": 118,
+            "value": 2,
+            "isVisibleInFront": false,
+            "frontendLabel": "Apply MAP",
+            "type": "select",
+            "attributeCode": "msrp_enabled"
+        },
+        {
+            "id": 7,
+            "attributeId": 119,
+            "value": 4,
+            "isVisibleInFront": false,
+            "frontendLabel": "Display Actual Price",
+            "type": "select",
+            "attributeCode": "msrp_display_actual_price_type"
+        },
+        {
+            "id": 8,
+            "attributeId": 121,
+            "value": 1,
+            "isVisibleInFront": false,
+            "frontendLabel": "Is Product Available for Purchase with Google Checkout",
+            "type": "select",
+            "attributeCode": "enable_googlecheckout"
+        },
+        {
+            "id": 3,
+            "attributeId": 139,
+            "value": "8.4 height, 7.5 width",
+            "isVisibleInFront": false,
+            "frontendLabel": "dimension",
+            "type": "text",
+            "attributeCode": "dimension"
+        },
+        {
+            "id": 1,
+            "attributeId": 145,
+            "value": 4,
+            "isVisibleInFront": true,
+            "frontendLabel": "Material",
+            "type": "select",
+            "attributeCode": "metal_type"
+        },
+        {
+            "id": 10,
+            "attributeId": 152,
+            "value": 27,
+            "isVisibleInFront": false,
+            "frontendLabel": "Stone Type",
+            "type": "multiselect",
+            "attributeCode": "stone_type"
+        },
+        {
+            "id": 4,
+            "attributeId": 155,
+            "value": 40,
+            "isVisibleInFront": false,
+            "frontendLabel": "Style",
+            "type": "multiselect",
+            "attributeCode": "style"
+        },
+        {
+            "id": 5,
+            "attributeId": 156,
+            "value": 47,
+            "isVisibleInFront": false,
+            "frontendLabel": "lock type",
+            "type": "select",
+            "attributeCode": "lock_type"
+        },
+        {
+            "id": 0,
+            "attributeId": 157,
+            "value": 53,
+            "isVisibleInFront": false,
+            "frontendLabel": "Color",
+            "type": "multiselect",
+            "attributeCode": "color"
+        }
+    ],
+    "hasOptions": false
+}
