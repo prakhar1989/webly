@@ -18,4 +18,4 @@ You are expected to give a final .apk file which will open the product page. For
 
 We need you to create a navigation test scenarios using CasperJS (http://casperjs.org/) to test a checkout flow, from adding a product to cart to placing an order as a guest user.
 
-The expected output is the casper js files required to test the navigation. Please usehttp://m.kamajewellery.com/ to make these tests, also please keep the name in shipping and billing form as webly_test as the ecommerce team at Kama will need to know that these are test orders coming from our system.
+The expected output is the casper js files required to test the navigation. Please use http://m.kamajewellery.com/ to make these tests, also please keep the name in shipping and billing form as webly_test as the ecommerce team at Kama will need to know that these are test orders coming from our system.
