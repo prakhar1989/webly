@@ -1,4 +1,5 @@
-> Webly 
+Webly Assignment
+===
 
 ### Task 1 - Basic Javascript debugging
 
@@ -8,7 +9,7 @@ These are just basic stuff, you should be able to solve them with no problems, w
 
 ### Task 2 - One screen Android app
 
-Create a one page android app with Ionic Framework (http://ionicframework.com), we will give a web service resource we are using internally to power our product. This is a product resource endpointhttp://retailplusapp.com/api/store/catalog/products/413.json representing a single product. You are required to pass this header "X-RetailPlus-Store-Id : 533ce7e652c8fdd31d8b4569" with the request to get a successful response from the web service. 
+Create a one page android app with Ionic Framework (http://ionicframework.com), we will give a web service resource we are using internally to power our product. This is a product resource endpoint http://retailplusapp.com/api/store/catalog/products/413.json representing a single product. You are required to pass this header "X-RetailPlus-Store-Id : 533ce7e652c8fdd31d8b4569" with the request to get a successful response from the web service. 
 This end point will give you basic information about the product, like the images, price, sku, name, description etc. For a reference this is the actual implementation page for the resource http://m.kamajewellery.com/shop/category/rings/product/ring-38837
 You are expected to give a final .apk file which will open the product page. For any further clarifications feel free to contact me or Aditya
 
