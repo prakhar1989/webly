@@ -1,15 +1,19 @@
 angular.module('starter.controllers', [])
 
-.controller('DashCtrl', function($scope) {
+.controller('appController', function($scope, $ionicSideMenuDelegate) {
+   $scope.toggleMenu = function() {
+      $ionicSideMenuDelegate.toggleLeft();
+     }
 })
+.controller('mainController', function($scope){
+//   $scope.doRefresh = function() {
+//     $http.get('www.google.com')
+//      .success(function(newItems) {
 
-.controller('FriendsCtrl', function($scope, Friends) {
-  $scope.friends = Friends.all();
-})
-
-.controller('FriendDetailCtrl', function($scope, $stateParams, Friends) {
-  $scope.friend = Friends.get($stateParams.friendId);
-})
-
-.controller('AccountCtrl', function($scope) {
+//      })
+//      .finally(function() {
+//        // Stop the ion-refresher from spinning
+//        $scope.$broadcast('scroll.refreshComplete');
+//      });
+//   };
 });
