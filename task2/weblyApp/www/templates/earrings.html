@@ -4,24 +4,51 @@
                        pulling-text="Pull to refresh..."
                        on-refresh="doRefresh()">
         </ion-refresher>
-        <div class="row row-center responsive-sm">
-            <div class="col">
-                <div class="item item-image">
-                    <img src="cover.jpg">
-                </div>
-            </div>
-            <div class="col">Earrings/Studs <br> Esr Stud <br> {{products.shortDescription}} <br> Type <br> Price <br> Buy Button <br> </div>
+        <div class="list" style="display : {{cartHasItem}}">
+            <a class="item item-icon-left" href="#">
+                <i class="icon ion-bag"></i>
+                Checkout
+                <span class="badge badge-assertive">{{cartItems}}</span>
+            </a>
         </div>
-        <div class="row row-center responsive-sm">
+        <div class="list card" style="margin-top: 10px;">
 
-        </div>
-        <div class="row row-center responsive-sm">
-            <div class="col">
-                Metal Type stuff
+            <div class="item item-avatar">
+                <img src={{products.thumbnail.url}}>
+                <h2>{{products.name}}</h2>
+                <p ng-class="product.stock.quantity >0 ? ' button button-small button-balanced' : ' button button-small button-assertive'">
+                  In Stock
+                </p>
             </div>
-            <div class="col">
-                Setting Type Stuff
+
+            <div class="item item-body">
+                <div class = "row">
+                    <div class = "col"><img class="full-image" src={{products.images[0].url}}></div>
+                    <div class = "col"><img class="full-image" src={{products.images[1].url}}></div>
+                </div>
+                <p>
+                    {{products.description}}
+                </p>
+                <p>
+                    <div class= "button-bar">
+                        <button class="button button-clear button-dark">
+                            <b>{{products.price | currency:"₹":2:",":"." }}</b>
+                        </button>
+                        <a ng-class="product.stock.quantity >0 ? ' button icon-left ion-ios7-cart button-royal button-outline'
+                                     : 'button icon-left ion-ios7-cart button-light button-outline'"
+                           ng-click="addToCart()" >
+                            Add to Cart
+                        </a>
+                   </div>
+                </p>
+            </div>
+
+            <div class="item tabs tabs-secondary tabs-icon-left">
+                <a class="tab-item" href="#">
+                    <i class="icon ion-share"></i>
+                    Share
+                </a>
             </div>
         </div>
-    </ion-content>
+</ion-content>
 </ion-view>
