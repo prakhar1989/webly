@@ -4,7 +4,7 @@ var http  = require('http'),
 var app = http.createServer(function(req, res) {
 	res.setHeader('Content-Type', 'application/json');
   // Website you wish to allow to connect
-   res.setHeader('Access-Control-Allow-Origin', 'http://localhost');
+  res.setHeader('Access-Control-Allow-Origin', 'http://localhost:8100');
 	var productJson = JSON.parse(fs.readFileSync('product.json'));
 	res.end(JSON.stringify(productJson));
 });
