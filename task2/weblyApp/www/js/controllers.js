@@ -42,7 +42,6 @@ angular.module('starter.controllers', [])
     }
   };
 
-
   // Create and load the Modal
   $ionicModal.fromTemplateUrl('checkoutCart.html', function(modal) {
     $scope.cartModal = modal;
@@ -69,6 +68,13 @@ angular.module('starter.controllers', [])
     $scope.grandTotal = 0;
     $scope.cartModal.hide();
   };
+
+  //Cleanup the modal when we're done with it!
+  $scope.$on('$destroy', function() {
+    $scope.modal.remove();
+  });
+
+
 
 
 });

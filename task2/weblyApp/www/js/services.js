@@ -12,8 +12,8 @@ angular.module('starter.services', [])
               'Accept': 'application/json;odata=verbose'
           }
       };
-      //$http.get('http://retailplusapp.com/api/store/catalog/products/413.json',config).success(callback);
-      $http.get('http://localhost:3000').success(callback);
+      $http.get('http://retailplusapp.com/api/store/catalog/products/413.json',config).success(callback);
+//    $http.get('http://localhost:3000').success(callback);
     }
   };
 
