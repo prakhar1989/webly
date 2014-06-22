@@ -30,14 +30,12 @@
                     {{products.description}}
                 </p>
                 <p>
-                    <div class = "row">
+                    <div class= "button-bar">
                         <button class="button button-clear button-dark">
                             <b>{{products.price | currency:"₹":2:",":"." }}</b>
                         </button>
-                    </div>
-                    <div class = "row">
-                        <a ng-class="product.stock.quantity >0 ? ' button icon-left ion-ios7-cart button-royal button-outline'
-                                     : 'button icon-left ion-ios7-cart button-light button-outline'"
+                        <a ng-class="product.stock.quantity >0 ? ' button button-small icon-left ion-ios7-cart button-royal button-outline'
+                                     : 'button button-small icon-left ion-ios7-cart button-light button-outline'"
                            ng-click="addToCart()" >
                             Add to Cart
                         </a>

@@ -86,3 +86,39 @@
 2014-06-21 16:11:20.621 HelloCordova[7441:70b] [CDVTimer][TotalPluginStartup] 1.417994ms
 2014-06-21 16:11:20.718 HelloCordova[7441:70b] Resetting plugins due to page load.
 2014-06-21 16:11:20.864 HelloCordova[7441:70b] Finished load of: file:///Users/dushyantrao/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/8AE518CA-4655-4A9D-A1CB-B04D1D425DFA/HelloCordova.app/www/index.html#/app/landing
+2014-06-22 12:46:25.064 HelloCordova[9412:70b] Multi-tasking -> Device: YES, App: YES
+2014-06-22 12:46:25.104 HelloCordova[9412:70b] Unlimited access to network resources
+2014-06-22 12:46:25.257 HelloCordova[9412:70b] [CDVTimer][keyboard] 0.091970ms
+2014-06-22 12:46:25.258 HelloCordova[9412:70b] CDVPlugin class CDVStatusBar (pluginName: statusbar) does not exist.
+2014-06-22 12:46:25.258 HelloCordova[9412:70b] [CDVTimer][statusbar] 0.485003ms
+2014-06-22 12:46:25.259 HelloCordova[9412:70b] [CDVTimer][TotalPluginStartup] 1.523018ms
+2014-06-22 12:46:25.425 HelloCordova[9412:70b] Resetting plugins due to page load.
+2014-06-22 12:46:25.621 HelloCordova[9412:70b] Finished load of: file:///Users/dushyantrao/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/8AE518CA-4655-4A9D-A1CB-B04D1D425DFA/HelloCordova.app/www/index.html#/app/earrings
+2014-06-22 12:47:35.709 HelloCordova[9412:70b] Resetting plugins due to page load.
+2014-06-22 12:47:38.114 HelloCordova[9412:70b] Finished load of: https://twitter.com/dushyantraoc
+2014-06-22 12:47:38.115 HelloCordova[9412:70b] Resetting plugins due to page load.
+2014-06-22 12:47:42.452 HelloCordova[9412:70b] Finished load of: https://mobile.twitter.com/dushyantraoc
+2014-06-22 12:48:42.584 HelloCordova[9747:70b] Multi-tasking -> Device: YES, App: YES
+2014-06-22 12:48:42.593 HelloCordova[9747:70b] Unlimited access to network resources
+2014-06-22 12:48:42.609 HelloCordova[9747:70b] [CDVTimer][keyboard] 0.057042ms
+2014-06-22 12:48:42.609 HelloCordova[9747:70b] CDVPlugin class CDVStatusBar (pluginName: statusbar) does not exist.
+2014-06-22 12:48:42.609 HelloCordova[9747:70b] [CDVTimer][statusbar] 0.440001ms
+2014-06-22 12:48:42.610 HelloCordova[9747:70b] [CDVTimer][TotalPluginStartup] 1.322985ms
+2014-06-22 12:48:42.697 HelloCordova[9747:70b] Resetting plugins due to page load.
+2014-06-22 12:48:42.829 HelloCordova[9747:70b] Finished load of: file:///Users/dushyantrao/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/8AE518CA-4655-4A9D-A1CB-B04D1D425DFA/HelloCordova.app/www/index.html#/app/earrings
+2014-06-22 12:49:12.136 HelloCordova[9946:70b] Multi-tasking -> Device: YES, App: YES
+2014-06-22 12:49:12.142 HelloCordova[9946:70b] Unlimited access to network resources
+2014-06-22 12:49:12.159 HelloCordova[9946:70b] [CDVTimer][keyboard] 0.092983ms
+2014-06-22 12:49:12.160 HelloCordova[9946:70b] CDVPlugin class CDVStatusBar (pluginName: statusbar) does not exist.
+2014-06-22 12:49:12.160 HelloCordova[9946:70b] [CDVTimer][statusbar] 0.469029ms
+2014-06-22 12:49:12.160 HelloCordova[9946:70b] [CDVTimer][TotalPluginStartup] 1.540959ms
+2014-06-22 12:49:12.257 HelloCordova[9946:70b] Resetting plugins due to page load.
+2014-06-22 12:49:12.375 HelloCordova[9946:70b] Finished load of: file:///Users/dushyantrao/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/8AE518CA-4655-4A9D-A1CB-B04D1D425DFA/HelloCordova.app/www/index.html#/app/earrings
+2014-06-22 12:50:26.649 HelloCordova[10464:70b] Multi-tasking -> Device: YES, App: YES
+2014-06-22 12:50:26.659 HelloCordova[10464:70b] Unlimited access to network resources
+2014-06-22 12:50:26.683 HelloCordova[10464:70b] [CDVTimer][keyboard] 0.097990ms
+2014-06-22 12:50:26.684 HelloCordova[10464:70b] CDVPlugin class CDVStatusBar (pluginName: statusbar) does not exist.
+2014-06-22 12:50:26.684 HelloCordova[10464:70b] [CDVTimer][statusbar] 0.536025ms
+2014-06-22 12:50:26.685 HelloCordova[10464:70b] [CDVTimer][TotalPluginStartup] 1.679957ms
+2014-06-22 12:50:26.789 HelloCordova[10464:70b] Resetting plugins due to page load.
+2014-06-22 12:50:26.925 HelloCordova[10464:70b] Finished load of: file:///Users/dushyantrao/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/8AE518CA-4655-4A9D-A1CB-B04D1D425DFA/HelloCordova.app/www/index.html#/app/earrings

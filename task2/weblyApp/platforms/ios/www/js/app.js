@@ -35,18 +35,21 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     templateUrl: 'templates/default.html',
     controller: 'appController'
   })
-  .state('app.landing', {
-    url: '/landing',
+  .state('app.earrings', {
+    url: '/earrings',
     views: {
       'appContent': {
-        templateUrl: 'templates/landing.html',
-        controller: 'mainController'
+        templateUrl: 'templates/earrings.html',
+        controller: 'earringController'
       }
     }
   })
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/landing');
+  $urlRouterProvider.otherwise('/app/earrings');
 
+})
+.config(function($httpProvider){
+    delete $httpProvider.defaults.headers.common['X-Requested-With'];
 });
 
