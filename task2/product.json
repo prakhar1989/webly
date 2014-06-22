@@ -21,8 +21,8 @@
     "visibility": 4,
     "useStock": true,
     "stock": {
-        "inStock": false,
-        "quantity": 0
+        "inStock": true,
+        "quantity": 12
     },
     "images": [
         {

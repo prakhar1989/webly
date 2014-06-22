@@ -16,9 +16,12 @@
             <div class="item item-avatar">
                 <img src={{products.thumbnail.url}}>
                 <h2>{{products.name}}</h2>
-                <p ng-class="product.stock.quantity >0 ? ' button button-small button-balanced' : ' button button-small button-assertive'">
-                  In Stock
-                </p>
+				<div ng-if="products.stock.inStock">
+					<p class="button button-small button-balanced">In Stock</p>
+				</div>
+				<div ng-if="!products.stock.inStock">
+					<p class="button button-small button-assertive">Out of Stock</p>
+				</div>
             </div>
 
             <div class="item item-body">
