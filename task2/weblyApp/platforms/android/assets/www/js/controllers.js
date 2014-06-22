@@ -1,15 +1,37 @@
 angular.module('starter.controllers', [])
 
-.controller('DashCtrl', function($scope) {
+.controller('appController', function($scope, $ionicSideMenuDelegate) {
+  $scope.toggleMenu = function() {
+    $ionicSideMenuDelegate.toggleLeft();
+  }
 })
+.controller('earringController', function($scope, ProductFactory){
 
-.controller('FriendsCtrl', function($scope, Friends) {
-  $scope.friends = Friends.all();
-})
+  $scope.cartItems = 0;
+  $scope.cartHasItem = "none";
 
-.controller('FriendDetailCtrl', function($scope, $stateParams, Friends) {
-  $scope.friend = Friends.get($stateParams.friendId);
-})
+  $scope.doRefresh = function() {
+    ProductFactory.getEarrings(function(data){
+      $scope.products= data;
+    });
+    // Stop the ion-refresher from spinning
+    $scope.$broadcast('scroll.refreshComplete');
+  };
 
-.controller('AccountCtrl', function($scope) {
+  $scope.doRefresh();
+
+  $scope.addToCart = function(){
+    if($scope.products.stock.inStock){
+      $scope.cartItems = $scope.cartItems + 1;
+      $scope.showCheckout();
+    }
+  };
+
+  $scope.showCheckout = function(){
+    if($scope.cartItems != 0){
+      $scope.cartHasItem = "";
+    }
+  };
+
+
 });

@@ -3,24 +3,18 @@ angular.module('starter.services', [])
 /**
  * A simple example service that returns some data.
  */
-.factory('Friends', function() {
+.factory('ProductFactory', function($http) {
   // Might use a resource here that returns a JSON array
-
-  // Some fake testing data
-  var friends = [
-    { id: 0, name: 'Scruff McGruff' },
-    { id: 1, name: 'G.I. Joe' },
-    { id: 2, name: 'Miss Frizzle' },
-    { id: 3, name: 'Ash Ketchum' }
-  ];
-
-  return {
-    all: function() {
-      return friends;
-    },
-    get: function(friendId) {
-      // Simple index lookup
-      return friends[friendId];
+  return{
+    getEarrings: function(callback){
+      var config = {headers: {
+              'X-RetailPlus-Store-Id': '533ce7e652c8fdd31d8b4569 ',
+              'Accept': 'application/json;odata=verbose'
+          }
+      };
+      //$http.get('http://retailplusapp.com/api/store/catalog/products/413.json',config).success(callback);
+      $http.get('http://localhost:3000',config).success(callback);
     }
-  }
+  };
+
 });
