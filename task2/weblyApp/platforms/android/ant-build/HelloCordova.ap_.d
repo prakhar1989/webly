@@ -39,7 +39,7 @@
 /Users/asrinivasan/Code/webly/task2/weblyApp/platforms/android/assets/www/plugins \
 /Users/asrinivasan/Code/webly/task2/weblyApp/platforms/android/assets/www/README.md \
 /Users/asrinivasan/Code/webly/task2/weblyApp/platforms/android/assets/www/templates \
-/Users/asrinivasan/Code/webly/task2/weblyApp/platforms/android/assets/www/css/style.css \
+/Users/asrinivasan/Code/webly/task2/weblyApp/platforms/android/assets/www/css/app.css \
 /Users/asrinivasan/Code/webly/task2/weblyApp/platforms/android/assets/www/img/ionic.png \
 /Users/asrinivasan/Code/webly/task2/weblyApp/platforms/android/assets/www/js/app.js \
 /Users/asrinivasan/Code/webly/task2/weblyApp/platforms/android/assets/www/js/controllers.js \
@@ -118,9 +118,6 @@
 /Users/asrinivasan/Code/webly/task2/weblyApp/platforms/android/assets/www/plugins/com.ionic.keyboard/www/keyboard.js \
 /Users/asrinivasan/Code/webly/task2/weblyApp/platforms/android/assets/www/plugins/org.apache.cordova.device/www \
 /Users/asrinivasan/Code/webly/task2/weblyApp/platforms/android/assets/www/plugins/org.apache.cordova.device/www/device.js \
-/Users/asrinivasan/Code/webly/task2/weblyApp/platforms/android/assets/www/templates/friend-detail.html \
-/Users/asrinivasan/Code/webly/task2/weblyApp/platforms/android/assets/www/templates/tab-account.html \
-/Users/asrinivasan/Code/webly/task2/weblyApp/platforms/android/assets/www/templates/tab-dash.html \
-/Users/asrinivasan/Code/webly/task2/weblyApp/platforms/android/assets/www/templates/tab-friends.html \
-/Users/asrinivasan/Code/webly/task2/weblyApp/platforms/android/assets/www/templates/tabs.html \
+/Users/asrinivasan/Code/webly/task2/weblyApp/platforms/android/assets/www/templates/default.html \
+/Users/asrinivasan/Code/webly/task2/weblyApp/platforms/android/assets/www/templates/earrings.html \
 /Users/asrinivasan/Code/webly/task2/weblyApp/platforms/android/ant-build/AndroidManifest.xml \
