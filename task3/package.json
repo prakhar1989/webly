@@ -1,0 +1,14 @@
+{
+  "name": "weblycasper",
+  "version": "0.0.0",
+  "description": "[Getting Started](http://docs.casperjs.org/en/latest/quickstart.html) [Installation](http://docs.casperjs.org/en/latest/installation.html)",
+  "main": "caspertests.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "underscore": "^1.6.0"
+  }
+}
