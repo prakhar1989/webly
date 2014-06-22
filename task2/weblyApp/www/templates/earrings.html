@@ -5,7 +5,7 @@
                        on-refresh="doRefresh()">
         </ion-refresher>
         <div class="list" style="display : {{cartHasItem}}">
-            <a class="item item-icon-left" href="#">
+            <a class="item item-icon-left" ng-click="openCart()">
                 <i class="icon ion-bag"></i>
                 Checkout
                 <span class="badge badge-assertive">{{cartItems}}</span>
@@ -39,11 +39,11 @@
                         </button>
                     </div>
                     <div class = "row">
-						<a ng-class="products.stock.quantity > 0 ? ' button icon-left ion-ios7-cart button-royal button-outline'
-                                     : 'button icon-left ion-ios7-cart button-light button-outline'"
-                           ng-click="addToCart()" >
+						<button ng-class="products.stock.quantity > 0 ? ' button button-full icon-left ion-ios7-cart  button-royal'
+                                     : 'button button-full icon-left ion-ios7-cart  button-light'"
+                           ng-click="addToCart(products)" >
                             Add to Cart
-                        </a>
+                        </button>
                    </div>
                 </p>
             </div>
@@ -56,4 +56,50 @@
             </div>
         </div>
 </ion-content>
+<script id="checkoutCart.html" type="text/ng-template">
+
+  <div class="modal">
+
+    <!-- Modal header bar -->
+    <ion-header-bar class="bar-secondary bar-royal">
+      <button class="button button-clear ion-ios7-trash" ng-click="clearCart()"></button>
+      <h1 class="title">Cart</h1>
+      <button class="button button-clear ion-ios7-close-outline" ng-click="closeCart()"></button>
+    </ion-header-bar>
+
+    <!-- Modal content area -->
+    <ion-content>
+
+      <form ng-submit="">
+        <div class="list">
+
+            <div class="item item-avatar" ng-repeat="item in cart">
+                <img src={{item.thumbnail}}>
+                <h2>{{item.itemName}}</h2>
+                <p>{{item.price  | currency:"₹":2:",":"." }}</p>
+                <p>Subtotal: {{item.price * item.quantity  | currency:"₹":2:",":"." }}</p>
+                <span class="badge badge-assertive">{{item.quantity}}</span>
+            </div>
+            <label class="item">
+                <div class = "row">
+                    <div class = "col">
+                        <h2>Total Quantity: </h2><p>{{cartItems}}</p>
+                    </div>
+                    <div class = "col">
+                        <h2>Grand Total: </h2><p>{{grandTotal | currency:"₹":2:",":"." }}</p>
+                    </div>
+                </div>
+            </label>
+        </div>
+
+        <div class="padding">
+          <button type="submit" class="button button-block button-royal icon-left ion-card">Checkout</button>
+        </div>
+      </form>
+
+    </ion-content>
+
+  </div>
+
+</script>
 </ion-view>
