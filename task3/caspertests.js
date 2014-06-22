@@ -28,6 +28,17 @@ casper.test.begin("Placing an order", 3, function suite(test) {
 		test.assertTitle(expectedTitle, "Product page is as expected");
 	});
 
+	casper.then(function() {
+		// fill the dropdown and click on buy now
+		this.fill('form#add-to-cart-form', {
+			'options[416]': "9"
+		}, true);
+	});
+
+	casper.then(function() {
+		console.log(this.getCurrentUrl()); // not going correctly
+	});
+
 	casper.run(function() {
 		test.done();
 	});
