@@ -16,7 +16,9 @@
             <div class="item item-avatar">
                 <img src={{products.thumbnail.url}}>
                 <h2>{{products.name}}</h2>
-                <p>{{products.stock.instock}}</p>
+                <p ng-class="product.stock.quantity >0 ? ' button button-small button-balanced' : ' button button-small button-assertive'">
+                  In Stock
+                </p>
             </div>
 
             <div class="item item-body">
@@ -28,25 +30,25 @@
                     {{products.description}}
                 </p>
                 <p>
-                    <a class="button icon-left ion-ios7-cart button-calm" ng-click="addToCart()">Add to Cart</a>
+                    <div class= "button-bar">
+                        <button class="button button-clear button-dark">
+                            <b>{{products.price | currency:"₹":2:",":"." }}</b>
+                        </button>
+                        <a ng-class="product.stock.quantity >0 ? ' button icon-left ion-ios7-cart button-royal button-outline'
+                                     : 'button icon-left ion-ios7-cart button-light button-outline'"
+                           ng-click="addToCart()" >
+                            Add to Cart
+                        </a>
+                   </div>
                 </p>
             </div>
 
             <div class="item tabs tabs-secondary tabs-icon-left">
                 <a class="tab-item" href="#">
-                    <i class="icon ion-thumbsup"></i>
-                    Like
-                </a>
-                <a class="tab-item" href="#">
-                    <i class="icon ion-chatbox"></i>
-                    Comment
-                </a>
-                <a class="tab-item" href="#">
                     <i class="icon ion-share"></i>
                     Share
                 </a>
             </div>
-
         </div>
-    </ion-content>
+</ion-content>
 </ion-view>

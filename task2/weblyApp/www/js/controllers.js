@@ -1,9 +1,9 @@
 angular.module('starter.controllers', [])
 
 .controller('appController', function($scope, $ionicSideMenuDelegate) {
-   $scope.toggleMenu = function() {
-      $ionicSideMenuDelegate.toggleLeft();
-     }
+  $scope.toggleMenu = function() {
+    $ionicSideMenuDelegate.toggleLeft();
+  }
 })
 .controller('earringController', function($scope, ProductFactory){
 
@@ -14,13 +14,17 @@ angular.module('starter.controllers', [])
     ProductFactory.getEarrings(function(data){
       $scope.products= data;
     });
-       // Stop the ion-refresher from spinning
-       $scope.$broadcast('scroll.refreshComplete');
+    // Stop the ion-refresher from spinning
+    $scope.$broadcast('scroll.refreshComplete');
   };
 
+  $scope.doRefresh();
+
   $scope.addToCart = function(){
-    $scope.cartItems = $scope.cartItems + 1;
-    $scope.showCheckout();
+    if($scope.products.stock.inStock){
+      $scope.cartItems = $scope.cartItems + 1;
+      $scope.showCheckout();
+    }
   };
 
   $scope.showCheckout = function(){
@@ -29,5 +33,5 @@ angular.module('starter.controllers', [])
     }
   };
 
-  $scope.doRefresh();
+
 });
