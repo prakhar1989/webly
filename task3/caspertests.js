@@ -102,32 +102,13 @@ casper.test.begin("Placing an order", 8, function suite(test) {
 
 	casper.then(function() {
 		test.assert(this.exists('div.review-container h4'), "Order Review heading is as expected");
-	});
-
-	casper.waitWhileSelector('button.loading');
-	
-	casper.then(function() {
 		this.click('button[type=submit]');
 	});
 
-	casper.waitFor(function check() {
-		return this.evaluate(function() {
-			return document.querySelectorAll('h2').length > 0;
-		});
-	}, function then() {
-		this.captureSelector('order-h2.png', 'h2');
-	//}, function timeout() {
-		//this.echo("timed out man :(");
-	//}, 30000);
+	casper.waitForSelector('div.processing-order');
 
-	casper.waitForSelector('div.order-details', function check() {}, function timeout() {
-		console.log("----- Timed Out -----");
-	}, 20000);
-	
-	//casper.waitForSelector('div.order-details h2');
-
-	casper.then(function() { 
-		console.log("h2 exists: " + this.exists('h2')); 
+  casper.then(function() {
+		console.log(this.getCurrentUrl());
 	});
 
 	casper.run(function() {
