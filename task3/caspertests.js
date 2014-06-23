@@ -89,6 +89,8 @@ casper.test.begin("Placing an order", 7, function suite(test) {
 		test.assertEquals(checkout_url, this.getCurrentUrl(), "Checkout page Step 3 [PAYMENT] - loaded as expected");
 	});
 
+	casper.waitForSelector('ul.payment-methods li');
+
 	casper.then(function() {
 		// click on cash on delivery
 		this.click('ul.payment-methods li');
@@ -97,19 +99,17 @@ casper.test.begin("Placing an order", 7, function suite(test) {
 	casper.waitForSelector('div.review-container');
 
 	casper.then(function() {
+		test.assert(this.exists('div.review-container h4'), "Order Review heading is as expected");
 		this.click('button[type=submit]');
 	});
 	
-	//casper.then(function() {
-		//console.log(this.getCurrentUrl());
-	//})
+	casper.waitForSelector('div.processing-order');
 
-	//casper.waitForSelector('div.order-details');
-
-	//casper.then(function() { console.log(this.getCurrentUrl()); });
+	casper.then(function() { 
+		console.log(this.getCurrentUrl()); 
+	});
 
 	casper.run(function() {
 		test.done();
 	});
-
 });
