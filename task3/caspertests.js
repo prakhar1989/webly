@@ -1,6 +1,6 @@
 var home_url = "http://m.kamajewellery.com";
 
-casper.test.begin("Placing an order", 3, function suite(test) {
+casper.test.begin("Placing an order", 6, function suite(test) {
 
 	casper.start(home_url);
 
@@ -32,12 +32,41 @@ casper.test.begin("Placing an order", 3, function suite(test) {
 		// fill the dropdown and click on buy now
 		this.fill('form#add-to-cart-form', {
 			'options[416]': '2884',
-			'productId': '1093'
-		}, true);
+		});
+		this.click('button[type=submit]');
+	});
+
+	casper.waitForSelector('.filled-cart');
+
+	casper.then(function() {
+		var cart_url = "http://m.kamajewellery.com/shop/checkout/cart";
+		test.assertEquals(cart_url, this.getCurrentUrl(), "Cart page loaded as expected");
 	});
 
 	casper.then(function() {
-		console.log(this.getCurrentUrl()); // not going correctly
+		// click on place order
+		this.click('.filled-cart div.button a');
+	});
+
+	casper.waitForSelector('form#form-checkout-login');
+
+	casper.then(function() {
+		var checkout_url = "http://m.kamajewellery.com/shop/checkout/#/index";
+		test.assertEquals(checkout_url, this.getCurrentUrl(), "Checkout page Step 1 [LOGIN] - loaded as expected");
+	});
+
+	casper.then(function() {
+		this.fill('form#form-checkout-login', {
+			'email': "webly_test@example.com",
+		});
+		this.click('button[type=submit]');
+	});
+
+	casper.waitForSelector('form#form-checkout-shipping');
+
+	casper.then(function() {
+		var checkout_url = "http://m.kamajewellery.com/shop/checkout/#/shipping";
+		test.assertEquals(checkout_url, this.getCurrentUrl(), "Checkout page Step 2 [DELIVERY] - loaded as expected");
 	});
 
 	casper.run(function() {
