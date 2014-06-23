@@ -1,6 +1,8 @@
 // problem: why does Ralph only bark once?
 // fix it to make Ralph bark twice!
 
+//answer: setTimeout takes a function as first parameter. the function wasn't being invoked.
+
 var Dog = function( name ) {
   this.name = name
 }
