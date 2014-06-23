@@ -1,6 +1,6 @@
 var home_url = "http://m.kamajewellery.com";
 
-casper.test.begin("Placing an order", 6, function suite(test) {
+casper.test.begin("Placing an order", 7, function suite(test) {
 
 	casper.start(home_url);
 
@@ -68,6 +68,45 @@ casper.test.begin("Placing an order", 6, function suite(test) {
 		var checkout_url = "http://m.kamajewellery.com/shop/checkout/#/shipping";
 		test.assertEquals(checkout_url, this.getCurrentUrl(), "Checkout page Step 2 [DELIVERY] - loaded as expected");
 	});
+
+	casper.then(function() {
+		this.fill('form#form-checkout-shipping', {
+			'pincode': '201301',
+			'firstname': 'webly_test',
+			'lastname': 'webly_test',
+			'shippingStreet': '221B Baker Street',
+			'shippingState': '2',
+			'shippingCity': 'Hyderabad',
+			'mobile': '9009900999'
+		});
+		this.click('button[type=submit]');
+	});
+
+	casper.waitForSelector('form#form-checkout-payment');
+
+	casper.then(function() {
+		var checkout_url = "http://m.kamajewellery.com/shop/checkout/#/payment";
+		test.assertEquals(checkout_url, this.getCurrentUrl(), "Checkout page Step 3 [PAYMENT] - loaded as expected");
+	});
+
+	casper.then(function() {
+		// click on cash on delivery
+		this.click('ul.payment-methods li');
+	});
+
+	casper.waitForSelector('div.review-container');
+
+	casper.then(function() {
+		this.click('button[type=submit]');
+	});
+	
+	//casper.then(function() {
+		//console.log(this.getCurrentUrl());
+	//})
+
+	//casper.waitForSelector('div.order-details');
+
+	//casper.then(function() { console.log(this.getCurrentUrl()); });
 
 	casper.run(function() {
 		test.done();
