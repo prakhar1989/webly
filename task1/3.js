@@ -2,8 +2,10 @@
 // since 4 * 4 is 16, 2 * 2 is 4 and 16 - 4 is 12
 // fix it to log out 12!
 
+//answer: default is val in javascript. Hence it was immutable and the value of result was not changing because of the closure
+
 function square(num) {
-  var result = num * num //default is val
+  var result = num * num
   return result
 }
 
