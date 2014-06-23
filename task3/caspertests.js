@@ -1,6 +1,8 @@
 var home_url = "http://m.kamajewellery.com";
 
-casper.test.begin("Placing an order", 7, function suite(test) {
+casper.options.stepTimeout = 20000;
+
+casper.test.begin("Placing an order", 8, function suite(test) {
 
 	casper.start(home_url);
 
@@ -93,7 +95,7 @@ casper.test.begin("Placing an order", 7, function suite(test) {
 
 	casper.then(function() {
 		// click on cash on delivery
-		this.click('ul.payment-methods li');
+		this.click('ul.payment-methods li:nth-child(2)');
 	});
 
 	casper.waitForSelector('div.review-container');
@@ -102,11 +104,15 @@ casper.test.begin("Placing an order", 7, function suite(test) {
 		test.assert(this.exists('div.review-container h4'), "Order Review heading is as expected");
 		this.click('button[type=submit]');
 	});
+
+	casper.waitForSelector('h2', function check() {}, function timeout() {
+		console.log("----- Timed Out -----");
+	}, 10000);
 	
-	casper.waitForSelector('div.processing-order');
+	casper.waitForSelector('h2');
 
 	casper.then(function() { 
-		console.log(this.getCurrentUrl()); 
+		console.log("h2 exists: " + this.exists('h2')); 
 	});
 
 	casper.run(function() {
